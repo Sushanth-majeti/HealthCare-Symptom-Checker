@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthEase - Symptom Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>HealthEase</h1>
+                        <span>Symptom Checker</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Warning Banner -->
+        <div class="warning-banner">
+            <div class="warning-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="warning-text">
+                    <strong>For Educational Use Only</strong>
+                    <span>Not a substitute for professional medical advice</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="section-title">
+                        <h2>Enter Your Symptoms</h2>
+                        <p>Describe what you are feeling in detail</p>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="textarea-wrapper">
+                        <textarea 
+                            id="symptoms" 
+                            placeholder="Type your symptoms here... (e.g., headache, fever, fatigue)"
+                            maxlength="1000"
+                        ></textarea>
+                        <div class="textarea-footer">
+                            <div class="char-count">
+                                <span id="char-count">0</span>/1000 characters
+                            </div>
+                            <div class="input-tips">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Include duration, severity, and affected areas if possible</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="analyze-btn" class="analyze-btn">
+                        <div class="btn-content">
+                            <i class="fas fa-search"></i>
+                            <span>Analyze Symptoms</span>
+                        </div>
+                        <div class="btn-loader">
+                            <div class="spinner"></div>
+                            <span>Analyzing...</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Animation -->
+            <div id="loading" class="loading-section hidden">
+                <div class="loading-animation">
+                    <div class="pulse-rings">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring"></div>
+                    </div>
+                    <div class="loading-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                <div class="loading-text">
+                    <h3>AI Analysis in Progress</h3>
+                    <p>Processing your symptoms with advanced AI...</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results-section hidden">
+                <div class="results-header">
+                    <div class="results-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h2>Results</h2>
+                </div>
+                <div id="results-content" class="results-content"></div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="section-title">
+                        <h2>Recent Checks</h2>
+                        <p>Your past symptom analyses</p>
+                    </div>
+                    <button id="load-history" class="load-history-btn">
+                        <i class="fas fa-refresh"></i>
+                        <span>Load History</span>
+                    </button>
+                </div>
+                <div id="history-content" class="history-content"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="disclaimer">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="disclaimer-text">
+                        <h3>Important Disclaimer</h3>
+                        <p>This tool is for educational purposes only and should not replace professional medical advice. Always consult a qualified healthcare provider regarding any medical concerns.</p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 HealthEase Symptom Checker | Educational Tool</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

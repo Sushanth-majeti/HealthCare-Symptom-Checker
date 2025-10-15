@@ -16,8 +16,6 @@ A modern, AI-powered symptom checker application that uses Google Gemini AI to s
 - **Important**: A valid API key is required for the application to function
 
 ### 2. Configure Environment
-
-# Clone or download the project files
 # Create .env file from the template
 cp .env.example .env
 

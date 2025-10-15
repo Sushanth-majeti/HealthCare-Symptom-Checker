@@ -56,30 +56,9 @@ curl http://localhost:7810/api/history
 ### Health Check
 curl http://localhost:7810/health
 
-
-##  Project Structure
-
-
-healthcare-symptom-checker/
-├── public/
-│   ├── index.html          # Main frontend application
-│   ├── style.css           # Modern CSS styling
-│   └── script.js           # Frontend JavaScript
-├── src/
-│   ├── database.js         # SQLite database configuration
-│   ├── routes/
-│   │   └── symptoms.js     # API routes for symptom analysis
-│   └── services/
-│       └── gemini.js       # Google Gemini AI integration
-├── .env.example            # Environment variables template
-├── package.json            # Project dependencies
-└── server.js              # Express server setup
-
-
 ##  Environment Variables
 
 Create a `.env` file in the root directory:
-
 
 GOOGLE_API_KEY=your_google_gemini_api_key_here
 PORT=7810
@@ -90,15 +69,12 @@ NODE_ENV=development
 ### Local Development
 npm run dev
 
-
 ### Production Build
 npm start
 
 ### Vercel Deployment
 npm run build
 vercel --prod
-
-##  API Response Format
 
 ### Successful Analysis
 ```json
